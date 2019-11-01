@@ -1,7 +1,7 @@
 ![](Slides/assets/DJlogo_alpha.png?raw=true)<!-- .element height="80%" width="80%" -->
 <http://www.DataJavelin.com>
-#### Title
-#### Author
+#### Gaussians and Bayesian probability: Partnering together for Faster flood predictions and beyond
+#### Dr Peter Hurley
 
 Note:
 * Chief Technical officer of DataJavelin
