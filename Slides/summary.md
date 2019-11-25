@@ -6,3 +6,6 @@
     - A/B testing
     - hyper parameter tuning in neural networks
     - Our example: Calibration of flood models
+    
+
+Talk available at pdh21.github.io/

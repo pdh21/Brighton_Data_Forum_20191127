@@ -1,6 +1,6 @@
 ![](Slides/assets/DJlogo_alpha.png?raw=true)<!-- .element height="80%" width="80%" -->
 <http://www.DataJavelin.com>
-#### Gaussians and Bayesian probability: Partnering together for Faster flood predictions and beyond
+#### Revealing the magic behind Bayesian Optimisation
 #### Dr Peter Hurley
 
 Note:
