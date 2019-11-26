@@ -18,9 +18,10 @@ Central limit theorem (CLT): in many situations, when independent random variabl
 ![](Slides/assets/MultivariateGaussian.png?raw=true)<!-- .element height="61%" width="61%" -->
 
 
+<!-- .slide: data-transition="slide in fade out" -->
 $p(\pmb x) \sim N(\pmb \mu|\Sigma)$
 
-Mathematically: $p(\pmb x) \sim \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}}e^{ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu)}$
+$p(\pmb x) \sim \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}}e^{ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu)}$
 
 Covariance matrix: $\Sigma =\begin{pmatrix} \sigma_1^2 & \sigma_{12}^2 \\\ \sigma_{21}^2 & \sigma_{2}^2\end{pmatrix}$
 
@@ -28,9 +29,19 @@ $\Sigma_1 =\begin{pmatrix} 1.0 & 0.0 \\\ 0.0 & 1.0\end{pmatrix}$
  <span style="color:red">$\Sigma_2 =\begin{pmatrix} 1.0 & 0.8 \\\ 0.8 & 1.0\end{pmatrix}$</span>
 
 
+<!-- .slide: data-transition="fade in slide out" -->
+$p(\pmb x) \sim N(\pmb \mu|\Sigma)$
+
+$p(\pmb x) \sim \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}}e^{ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu)}$
+
+Covariance matrix: $\Sigma =\begin{pmatrix} \sigma_1^2 & \sigma_{12}^2 \\\ \sigma_{21}^2 & \sigma_{2}^2\end{pmatrix}$
+
+![](Slides/assets/heatmap_cov.png?raw=true)
+
 
 ## Bayesian Probability
 $P(\theta|D,M) = \frac{P(D|\theta, M)P(\theta|M)}{P(D|M)}$
+
 $Posterior = \frac{Likelihood \times Prior }{Evidence}$
 
 * Transparent way of including model prior information

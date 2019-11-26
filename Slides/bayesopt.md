@@ -65,6 +65,8 @@ Note:
 
 ## Other Applications
 * Experimental Design [e.g. reducing drag](http://auai.org/uai2018/proceedings/papers/362.pdf)![](Slides/assets/drag_example.png?raw=true)
+
+
 * A/B testing [e.g. Facebook](https://research.fb.com/blog/2018/09/efficient-tuning-of-online-systems-using-bayesian-optimization/)
 * Hyperparameter tuning [e.g. Amazon](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-how-it-works.html)
 * [Synthetic Gene Design](https://arxiv.org/abs/1505.01627)
