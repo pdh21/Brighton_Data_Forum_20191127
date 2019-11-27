@@ -9,6 +9,10 @@
 
 
 This is an optimisation problem! 
+
+![](Slides/assets/BO_1.png?raw=true)
+
+
 ## Solutions:
 * Grid search?
 * Gradient descent?
