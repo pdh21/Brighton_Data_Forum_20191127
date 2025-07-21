@@ -7,10 +7,16 @@
 
 ![](Slides/assets/flowchart_ambiental.png?raw=true)
 
+Note:
+The challenge is finding parameters that provide the best fit to the data
+
 
 This is an optimisation problem! 
 
 ![](Slides/assets/BO_1.png?raw=true)
+
+Note:
+* We have some measure of goodness of fit, we have a parameter, where is the trough?
 
 
 ## Solutions:
@@ -19,9 +25,9 @@ This is an optimisation problem!
 * MCMC?
 
 Note: 
-* Grid search appropriate resolution? exponential with dimensions, lots of call to model
-* Gradient descent not applicable,  assumes optimisation function is convex
-* MCMC far too many calls to model
+* Grid search has numerous issues e.g. what is the appropriate resolution? it goes exponential with dimensions, which in turn requires lots of call to model
+* Gradient descent not applicable,  assumes optimisation function is convex. We also dont have gradient information
+* MCMC is another nice paramter search technique but in this case it requires far too many calls to model
 
 
 ## Bayesian Optimisation
@@ -29,9 +35,18 @@ Note:
 * incorporates __prior__ belief about optimisation function
 * updates the prior with samples drawn from function to get a posterior that better approximates optimisation function
 
+Note:
+Bayesian optimisation is ideal for this. It incorporates everything we covered, 
+* A Bayesian approach that allows us to provide a guide as to how function behaves
+
 
 * __Surrogate model__: approximates the optimisation function.
 * __acquisition function__ decides where best to sample function
+
+Note:
+* There are two key functions required
+* Surrogate model, GAussian Processes are the most favoured approach for this part
+* Acquisition, numerous choices whihc give different balances to exploration and minimisation
 
 
 ## BO in 1D
@@ -58,6 +73,12 @@ Note:
 
 ![](Slides/assets/non_opt_anim.gif?raw=true)![](Slides/assets/opt_anim.gif?raw=true)
 
+Note:
+The figure shows in 3d, how parameter space ins constrained before running simulations (left) and after (right). The movement is a proxy for uncertianty. The colours an indication of best fit.
+We applied this approach to searching parameter space in order to calibrate the flood models
+* We use Bayesian optimisation to effiecently work out the best parameters
+* IT does this by choosing which parameters to run, run the simulation, update the Gaussian process model of the optimisation function, then picks the next paramters to use to either explore an unknow part of parameter space, or fine tune where the optimal point is.
+
 
 ## Pros and Cons:
 * Efficient in number of samples required
@@ -77,6 +98,7 @@ Note:
 * many more
 
 Note:
+Other obvious uses for this approach include:
 * Emulator - Simulator - Physical system
 * A/B testing: Optimize the web design to maximize sign-ups, downloads, purchases, etc
 * Deep learning , reinforcment learning, 

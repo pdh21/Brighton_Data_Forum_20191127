@@ -6,4 +6,4 @@
 Note:
 * Chief Technical officer of DataJavelin
 * Talk about some of our prefered approaches to problems
-* The example I will walk talk about is based on a recent blog post, which contains more of the technical details
+* The example I will walk talk about is based on a recent Innovate UK project we carried out with Ambiental Flood analytics, a flood risk modelling company based in Brighton.

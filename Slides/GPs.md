@@ -4,14 +4,18 @@ A Bayesian non-parametric approach or:
 "a prior distribution over functions and updating this distribution by conditioning on the data"
 
 Note:
-conditioning on data: Likelihood
-Properties of the Gaussian distribution and Bayes theorem gives Gaussian process. 
+Lets break that statement down
+* conditioning on data: that is equivalnt to the Likelihood we saw when introducing Bayesian probability
+* Properties of the Gaussian distribution and Bayes theorem gives Gaussian process. 
 
 
 ## *a prior distribution over functions*
 Use the Gaussian distribution to constrain how function, $\mathbf{y}=f(\mathbf{x})$, behaves
 
 $\Sigma =\begin{pmatrix} \sigma_1^2 & \sigma_{12}^2 \\\ \sigma_{21}^2 & \sigma_{2}^2\end{pmatrix}$
+
+Note:
+* We saw how Gaussians have covariance, we can use that covariance function to constrain how functions are allowed to behave. Think of it as the next step up from constraining the intercept
 
 
 <center>
@@ -20,6 +24,12 @@ $\Sigma =\begin{pmatrix} \sigma_1^2 & \sigma_{12}^2 \\\ \sigma_{21}^2 & \sigma_{
 </video>
 </center>
 
+Note:
+* Here we have two points, but they have a covariance, i.e. they are correlated. 
+* In this example, there is very little covariance so if y0 is high, y9 could be high or low
+* We can constrain correlation with the Covaraince matrix. The second plot shows the covariance between the two points
+* The heatmap is another visualisation of the covaraince matrix we looked at before
+
 
 <center>
 <video autoplay="true" loop="true" muted="true" width="800">
@@ -27,12 +37,22 @@ $\Sigma =\begin{pmatrix} \sigma_1^2 & \sigma_{12}^2 \\\ \sigma_{21}^2 & \sigma_{
 </video>
 </center>
 
+Note:
+Now we do the same, but this time there is more covaraince
+* Now if y0 is high, y9 is also likley to be high
+* We can see how these points are correlated more by looking at the 2d plot
+* or the heatmap
+
 
 <center>
 <video autoplay="true" loop="true" muted="true" width="800">
    <source src="./Slides/assets/manypoints_small_l.mp4" type="video/mp4"> Your browser does not support the video tag.
 </video>
 </center>
+
+Note:
+Now lets move beyond 2 points and look at lots of them.
+* The covariance matrix on the right, governs how each points is correlated with each other
 
 
 ## Covariance functions
@@ -44,6 +64,11 @@ Prior on how the functions are allowed to behave.
 </video>
 </center>
 
+Note:
+* There are certian patterns we can use for covariance matrices that provide useful fluctuations.
+* We call these patterns covariance functions.
+* THE Square exponential is one. It provides a smooth function
+
 
 ### Periodic Exponential
 <center>
@@ -52,6 +77,9 @@ Prior on how the functions are allowed to behave.
 </video>
 </center>
 
+Note:
+You can introduce periodic behaviour
+
 
 ### RBF+Periodic Exponential
 <center>
@@ -59,6 +87,9 @@ Prior on how the functions are allowed to behave.
    <source src="./Slides/assets/RBF_period_exp_covfunc.mp4" type="video/mp4"> Your browser does not support the video tag.
 </video>
 </center>
+
+Note:
+OR even combine patterns, e.g. perodic and longer trend smoothing
 
 
 ## *conditioning on data*
@@ -79,6 +110,9 @@ Use a covariance function with
 </video>
 </center>
 
+Note:
+With no data points, the functions could still have a vareity of behaviours
+
 
 ### Condition on two data points 
 <center>
@@ -86,6 +120,9 @@ Use a covariance function with
    <source src="./Slides/assets/co2_twopoints.mp4" type="video/mp4"> Your browser does not support the video tag.
 </video>
 </center>
+
+Note:
+As soon as we start conditioning on points, the behavior is constrained.
 
 
 ### Condition on six data points 
@@ -95,11 +132,15 @@ Use a covariance function with
 </video>
 </center>
 
+Note:
+With 6 points, we have dramatically constrained the function by combining data and a prior belief on how function should behave.
+
 
 ### Condition on all data points
 ![](Slides/assets/co2fit_and_pred.png?raw=true)
 
 Note:
+* And finally by constraining the Gaussian process on data, and how the function behaves, we can use it to predict, with uncertianty how the function looks in the future.
 http://cbl.eng.cam.ac.uk/pub/Public/Turner/News/imperial-gp-tutorial.pdf
 
 
